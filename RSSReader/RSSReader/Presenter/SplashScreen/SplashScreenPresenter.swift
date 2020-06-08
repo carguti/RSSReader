@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+protocol SplashScreenPresenterDelegate: class {
+    
+}
+
+class SplashScreenPresenter {
+    let splashScreenProtocol: SplashScreenProtocol
+    weak var delegate: SplashScreenPresenterDelegate?
+    
+    init(splashScreenProtocol: SplashScreenProtocol, delegate: SplashScreenPresenterDelegate?) {
+        self.splashScreenProtocol = splashScreenProtocol
+        self.delegate = delegate
+    }
+    
+    func splashScreenShown() {
+        
+    }
+}
