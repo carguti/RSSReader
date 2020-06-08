@@ -8,22 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		C040F0BF248EA5C500B29D43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040F0BE248EA5C500B29D43 /* AppDelegate.swift */; };
-		C040F0C1248EA5C500B29D43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040F0C0248EA5C500B29D43 /* SceneDelegate.swift */; };
 		C040F0C3248EA5C500B29D43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040F0C2248EA5C500B29D43 /* ViewController.swift */; };
-		C040F0C6248EA5C500B29D43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C040F0C4248EA5C500B29D43 /* Main.storyboard */; };
 		C040F0C8248EA5CA00B29D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C040F0C7248EA5CA00B29D43 /* Assets.xcassets */; };
 		C040F0CB248EA5CA00B29D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C040F0C9248EA5CA00B29D43 /* LaunchScreen.storyboard */; };
+		C040F0DD248EA94800B29D43 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040F0DB248EA94800B29D43 /* SplashScreenViewController.swift */; };
+		C040F0DE248EA94800B29D43 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C040F0DC248EA94800B29D43 /* SplashScreenViewController.xib */; };
+		C040F0E1248EA97400B29D43 /* SplashScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040F0E0248EA97400B29D43 /* SplashScreenPresenter.swift */; };
+		C040F0E3248EA98700B29D43 /* SplashScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040F0E2248EA98700B29D43 /* SplashScreenFactory.swift */; };
+		C040F0E5248EA99900B29D43 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040F0E4248EA99900B29D43 /* AppCoordinator.swift */; };
+		C040F0E7248EA9A800B29D43 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040F0E6248EA9A800B29D43 /* CoordinatorProtocol.swift */; };
+		C040F0E9248EA9B600B29D43 /* GeneralCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040F0E8248EA9B600B29D43 /* GeneralCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C040F0BB248EA5C500B29D43 /* RSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C040F0BE248EA5C500B29D43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C040F0C0248EA5C500B29D43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C040F0C2248EA5C500B29D43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C040F0C5248EA5C500B29D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C040F0C7248EA5CA00B29D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C040F0CA248EA5CA00B29D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C040F0CC248EA5CA00B29D43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C040F0DB248EA94800B29D43 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		C040F0DC248EA94800B29D43 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreenViewController.xib; sourceTree = "<group>"; };
+		C040F0E0248EA97400B29D43 /* SplashScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenPresenter.swift; sourceTree = "<group>"; };
+		C040F0E2248EA98700B29D43 /* SplashScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenFactory.swift; sourceTree = "<group>"; };
+		C040F0E4248EA99900B29D43 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		C040F0E6248EA9A800B29D43 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		C040F0E8248EA9B600B29D43 /* GeneralCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,68 @@
 		C040F0BD248EA5C500B29D43 /* RSSReader */ = {
 			isa = PBXGroup;
 			children = (
+				C040F0D2248EA8C400B29D43 /* Coordinator */,
+				C040F0D3248EA8D300B29D43 /* Model */,
+				C040F0D4248EA8DD00B29D43 /* Presenter */,
+				C040F0D5248EA8EA00B29D43 /* View */,
 				C040F0BE248EA5C500B29D43 /* AppDelegate.swift */,
-				C040F0C0248EA5C500B29D43 /* SceneDelegate.swift */,
 				C040F0C2248EA5C500B29D43 /* ViewController.swift */,
-				C040F0C4248EA5C500B29D43 /* Main.storyboard */,
 				C040F0C7248EA5CA00B29D43 /* Assets.xcassets */,
 				C040F0C9248EA5CA00B29D43 /* LaunchScreen.storyboard */,
 				C040F0CC248EA5CA00B29D43 /* Info.plist */,
 			);
 			path = RSSReader;
+			sourceTree = "<group>";
+		};
+		C040F0D2248EA8C400B29D43 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C040F0E4248EA99900B29D43 /* AppCoordinator.swift */,
+				C040F0E6248EA9A800B29D43 /* CoordinatorProtocol.swift */,
+				C040F0E8248EA9B600B29D43 /* GeneralCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C040F0D3248EA8D300B29D43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C040F0D4248EA8DD00B29D43 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C040F0DF248EA95C00B29D43 /* SplashScreen */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C040F0D5248EA8EA00B29D43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C040F0DA248EA93000B29D43 /* SplashScreen */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C040F0DA248EA93000B29D43 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C040F0DB248EA94800B29D43 /* SplashScreenViewController.swift */,
+				C040F0DC248EA94800B29D43 /* SplashScreenViewController.xib */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		C040F0DF248EA95C00B29D43 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C040F0E0248EA97400B29D43 /* SplashScreenPresenter.swift */,
+				C040F0E2248EA98700B29D43 /* SplashScreenFactory.swift */,
+			);
+			path = SplashScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +189,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C040F0CB248EA5CA00B29D43 /* LaunchScreen.storyboard in Resources */,
+				C040F0DE248EA94800B29D43 /* SplashScreenViewController.xib in Resources */,
 				C040F0C8248EA5CA00B29D43 /* Assets.xcassets in Resources */,
-				C040F0C6248EA5C500B29D43 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +201,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C040F0E1248EA97400B29D43 /* SplashScreenPresenter.swift in Sources */,
 				C040F0C3248EA5C500B29D43 /* ViewController.swift in Sources */,
+				C040F0E7248EA9A800B29D43 /* CoordinatorProtocol.swift in Sources */,
 				C040F0BF248EA5C500B29D43 /* AppDelegate.swift in Sources */,
-				C040F0C1248EA5C500B29D43 /* SceneDelegate.swift in Sources */,
+				C040F0E9248EA9B600B29D43 /* GeneralCoordinator.swift in Sources */,
+				C040F0DD248EA94800B29D43 /* SplashScreenViewController.swift in Sources */,
+				C040F0E3248EA98700B29D43 /* SplashScreenFactory.swift in Sources */,
+				C040F0E5248EA99900B29D43 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C040F0C4248EA5C500B29D43 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C040F0C5248EA5C500B29D43 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C040F0C9248EA5CA00B29D43 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
