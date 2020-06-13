@@ -16,4 +16,11 @@ struct SplashScreenFactory {
         viewController.presenter = presenter
         return viewController
     }
+    
+    static func makeFeedList(delegate: FeedListPresenterDelegate?) -> FeedListViewController {
+        let viewController = FeedListViewController()
+        let presenter = FeedListPresenter(feedListProtocol: viewController, delegate: delegate)
+        viewController.presenter = presenter
+        return viewController
+    }
 }
