@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class FeedListCell: UITableViewCell {
     @IBOutlet weak var feedImageView: UIImageView!
@@ -21,20 +22,14 @@ class FeedListCell: UITableViewCell {
 
 extension FeedListCell {
     func configureFeed(notice: AnyObject, noticeImage: String) {
-        
+        titleLabel.text = notice.object(forKey: "title") as? String
+        descriptionLabel.text = notice.object(forKey: "pubDate") as? String
+        getImage(urlString: noticeImage) { (noticeImage) in
+            self.setNeedsDisplay()
+        }
     }
-//    func configureWithCharacter(character: Character) {
-//        nameLabel.text = character.name
-//        guard var path = character.thumbnail?.path else { return }
-//        path.insert("s", at: path.index(path.startIndex, offsetBy: +4))
-//        guard let imageExtension = character.thumbnail?.imageExtension else { return }
-//
-//        getImage(urlString: path+imageType+imageExtension) { backgroundImage in
-//            self.setNeedsDisplay()
-//        }
-//    }
-//
-//    func getImage(urlString: String, completion: @escaping (UIImage) -> ()) {
-//        backgroundImageView.sd_setImage(with: URL(string: urlString), placeholderImage: nil)
-//    }
+    
+    func getImage(urlString: String, completion: @escaping (UIImage) -> ()) {
+        feedImageView.sd_setImage(with: URL(string: urlString), placeholderImage: nil)
+    }
 }

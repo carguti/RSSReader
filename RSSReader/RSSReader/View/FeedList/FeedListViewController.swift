@@ -13,12 +13,40 @@ protocol FeedListProtocol: class {
 }
 
 class FeedListViewController: UIViewController {
-    var presenter: FeedListPresenter!
     @IBOutlet weak var tableView: UITableView!
+    
+    var presenter: FeedListPresenter!
+    var arrFeedList: [AnyObject] = []
+    var arrFeedImages: [AnyObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureTable()
+    }
+}
+
+extension FeedListViewController {
+    private func configureTable() {
+        tableView.register(UINib(nibName: "FeedListCell", bundle: nil), forCellReuseIdentifier: "FeedListCell")
+    }
+}
+
+extension FeedListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrFeedList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let feedListCell = tableView.dequeueReusableCell(withIdentifier: "FeedListCell", for: indexPath) as! FeedListCell
+        
+        feedListCell.configureFeed(notice: arrFeedList[indexPath.row], noticeImage: arrFeedImages[indexPath.row] as! String)
+        return feedListCell
+    }
+}
+
+extension FeedListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
 }
