@@ -14,13 +14,12 @@ protocol SplashScreenProtocol: class {
 
 class SplashScreenViewController: UIViewController {
     var presenter: SplashScreenPresenter!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        presenter.getData()
     }
-
 }
 
 extension SplashScreenViewController: SplashScreenProtocol { }
