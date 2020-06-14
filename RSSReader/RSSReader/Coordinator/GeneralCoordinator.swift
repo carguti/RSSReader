@@ -21,7 +21,7 @@ class GeneralCoordinator: CoordinatorProtocol {
     }
     
     func showFeedListScreen(feedImages: [AnyObject], feed: NSArray) {
-        let scene = SplashScreenFactory.makeFeedList(delegate: self)
+        let scene = SplashScreenFactory.makeFeedList(delegate: self, feedImages:feedImages, feed: feed)
         navigationController.viewControllers = [scene]
     }
 }
