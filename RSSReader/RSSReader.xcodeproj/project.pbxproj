@@ -27,6 +27,10 @@
 		C04C810B249189C1009048E0 /* FeedListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04C810A249189C1009048E0 /* FeedListPresenter.swift */; };
 		C04C810D249189D0009048E0 /* FeedListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04C810C249189D0009048E0 /* FeedListFactory.swift */; };
 		C04C811024953DA8009048E0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04C810F24953DA8009048E0 /* UIView+Extension.swift */; };
+		C080E6092496194400E7395D /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C080E6072496194400E7395D /* FeedDetailViewController.swift */; };
+		C080E60A2496194400E7395D /* FeedDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C080E6082496194400E7395D /* FeedDetailViewController.xib */; };
+		C080E60D2496CE3500E7395D /* FeedDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C080E60C2496CE3500E7395D /* FeedDetailPresenter.swift */; };
+		C080E6102497F23600E7395D /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C080E60F2497F23600E7395D /* FeedManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		C04C810A249189C1009048E0 /* FeedListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListPresenter.swift; sourceTree = "<group>"; };
 		C04C810C249189D0009048E0 /* FeedListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListFactory.swift; sourceTree = "<group>"; };
 		C04C810F24953DA8009048E0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C080E6072496194400E7395D /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
+		C080E6082496194400E7395D /* FeedDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedDetailViewController.xib; sourceTree = "<group>"; };
+		C080E60C2496CE3500E7395D /* FeedDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailPresenter.swift; sourceTree = "<group>"; };
+		C080E60F2497F23600E7395D /* FeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,7 @@
 				C04C810E24953D8B009048E0 /* Extensions */,
 				C040F0D3248EA8D300B29D43 /* Model */,
 				C040F0D4248EA8DD00B29D43 /* Presenter */,
+				C080E60E2497F21900E7395D /* Utils */,
 				C040F0D5248EA8EA00B29D43 /* View */,
 				C040F0BE248EA5C500B29D43 /* AppDelegate.swift */,
 				C040F0C2248EA5C500B29D43 /* ViewController.swift */,
@@ -141,6 +150,7 @@
 		C040F0D4248EA8DD00B29D43 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				C080E60B2496CE2100E7395D /* FeedDetail */,
 				C04C8109249189B2009048E0 /* FeedList */,
 				C040F0DF248EA95C00B29D43 /* SplashScreen */,
 			);
@@ -150,6 +160,7 @@
 		C040F0D5248EA8EA00B29D43 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C080E6062496191E00E7395D /* Detail */,
 				C04C80FF249186CD009048E0 /* FeedList */,
 				C040F0DA248EA93000B29D43 /* SplashScreen */,
 			);
@@ -208,6 +219,31 @@
 				C04C810F24953DA8009048E0 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C080E6062496191E00E7395D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C080E6072496194400E7395D /* FeedDetailViewController.swift */,
+				C080E6082496194400E7395D /* FeedDetailViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		C080E60B2496CE2100E7395D /* FeedDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C080E60C2496CE3500E7395D /* FeedDetailPresenter.swift */,
+			);
+			path = FeedDetail;
+			sourceTree = "<group>";
+		};
+		C080E60E2497F21900E7395D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C080E60F2497F23600E7395D /* FeedManager.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C04C8103249186F7009048E0 /* FeedListViewController.xib in Resources */,
+				C080E60A2496194400E7395D /* FeedDetailViewController.xib in Resources */,
 				C040F0CB248EA5CA00B29D43 /* LaunchScreen.storyboard in Resources */,
 				C040F0DE248EA94800B29D43 /* SplashScreenViewController.xib in Resources */,
 				C040F0C8248EA5CA00B29D43 /* Assets.xcassets in Resources */,
@@ -330,10 +367,13 @@
 				C04C8102249186F7009048E0 /* FeedListViewController.swift in Sources */,
 				C040F0E1248EA97400B29D43 /* SplashScreenPresenter.swift in Sources */,
 				C040F0C3248EA5C500B29D43 /* ViewController.swift in Sources */,
+				C080E60D2496CE3500E7395D /* FeedDetailPresenter.swift in Sources */,
 				C040F0E7248EA9A800B29D43 /* CoordinatorProtocol.swift in Sources */,
+				C080E6092496194400E7395D /* FeedDetailViewController.swift in Sources */,
 				C04C810D249189D0009048E0 /* FeedListFactory.swift in Sources */,
 				C040F0BF248EA5C500B29D43 /* AppDelegate.swift in Sources */,
 				C040F0ED248EC3C600B29D43 /* XMLParserManager.swift in Sources */,
+				C080E6102497F23600E7395D /* FeedManager.swift in Sources */,
 				C040F0E9248EA9B600B29D43 /* GeneralCoordinator.swift in Sources */,
 				C04C811024953DA8009048E0 /* UIView+Extension.swift in Sources */,
 				C040F0DD248EA94800B29D43 /* SplashScreenViewController.swift in Sources */,

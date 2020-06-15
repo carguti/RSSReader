@@ -22,6 +22,7 @@ class FeedListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureView()
         configureTable()
     }
 }
@@ -29,6 +30,10 @@ class FeedListViewController: UIViewController {
 extension FeedListViewController {
     private func configureTable() {
         tableView.register(UINib(nibName: "FeedListCell", bundle: nil), forCellReuseIdentifier: "FeedListCell")
+    }
+    
+    private func configureView() {
+        navigationController?.isNavigationBarHidden = true
     }
 }
 
@@ -47,7 +52,7 @@ extension FeedListViewController: UITableViewDataSource {
 
 extension FeedListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        presenter.didSelectNotice(feedImage: arrFeedImages[indexPath.row], feedNotice: arrFeedList[indexPath.row])
     }
 }
 
