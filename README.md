@@ -16,4 +16,4 @@ I have added a SplashScreen where I call to get the feed data.
 
 ## Future work
 
-Implement search functionality to filter by new's title. (I hadn´t time to implement ir, but I could explain how I wold implement that functionality, I have implented that several times before in other Apps)
+Implement search functionality to filter by new's title. (I hadn´t time to implement ir, but I could explain how I would implement that functionality, I have implented that several times before in other Apps)
