@@ -1,5 +1,7 @@
 # RSSReader
 
+RSSReader is an App te read a RSS Feed of news.
+
 ## Architecture
 
 I have used a MVP-Coordinator architecture, because I think that this kind of architecture is one of the best solutions for separate responsibilities between layers, for testing and for clear coding, I think is an architecture where if a new workmate comes to the project without any knowledge of it, he could not has problems to understand the code and the app structure and functionality.
@@ -11,3 +13,7 @@ I have also used a Singleton pattern to keep feeds accesible. It´s used to go b
 ## Observations
 
 I have added a SplashScreen where I call to get the feed data.
+
+## Future work
+
+Implement search functionality to filter by new's title. (I hadn´t time to implement ir, but I could explain how I wold implement that functionality, I have implented that several times before in other Apps)
