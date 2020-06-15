@@ -12,7 +12,6 @@ import UIKit
 @IBDesignable
 class RoundedView: UIView {}
 
-
 extension UIView {
   
   @IBInspectable

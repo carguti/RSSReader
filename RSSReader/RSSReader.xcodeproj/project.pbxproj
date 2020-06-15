@@ -117,7 +117,6 @@
 			children = (
 				C040F0D2248EA8C400B29D43 /* Coordinator */,
 				C04C810E24953D8B009048E0 /* Extensions */,
-				C040F0D3248EA8D300B29D43 /* Model */,
 				C040F0D4248EA8DD00B29D43 /* Presenter */,
 				C080E60E2497F21900E7395D /* Utils */,
 				C040F0D5248EA8EA00B29D43 /* View */,
@@ -138,13 +137,6 @@
 				C040F0E8248EA9B600B29D43 /* GeneralCoordinator.swift */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		C040F0D3248EA8D300B29D43 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		C040F0D4248EA8DD00B29D43 /* Presenter */ = {
