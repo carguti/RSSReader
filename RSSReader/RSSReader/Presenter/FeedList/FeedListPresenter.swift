@@ -9,7 +9,7 @@
 import Foundation
 
 protocol FeedListPresenterDelegate: class {
-    
+    func showFeedDetailScreen(feedImage: AnyObject, feedNotice: AnyObject)
 }
 
 class FeedListPresenter {
@@ -19,6 +19,10 @@ class FeedListPresenter {
     init(feedListProtocol: FeedListProtocol, delegate: FeedListPresenterDelegate?) {
         self.feedListProtocol = feedListProtocol
         self.delegate = delegate
+    }
+    
+    func didSelectNotice(feedImage: AnyObject, feedNotice: AnyObject) {
+        delegate?.showFeedDetailScreen(feedImage: feedImage, feedNotice: feedNotice)
     }
 }
 

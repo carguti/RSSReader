@@ -16,7 +16,7 @@ class SplashScreenPresenter {
     let splashScreenProtocol: SplashScreenProtocol
     weak var delegate: SplashScreenPresenterDelegate?
     
-    var myFeed : NSArray = []
+    var myFeed: NSArray = []
     var feedImgs: [AnyObject] = []
     var url: URL!
     
@@ -32,6 +32,8 @@ class SplashScreenPresenter {
         feedImgs = xmlParser.img as [AnyObject]
         myFeed = xmlParser.feeds
         
+        FeedManager.shared.feedNotices = myFeed
+        FeedManager.shared.feedImgs = feedImgs
         delegate?.goToFeedList(feedImages: feedImgs, feed: myFeed)
     }
 }

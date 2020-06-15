@@ -24,6 +24,11 @@ class GeneralCoordinator: CoordinatorProtocol {
         let scene = SplashScreenFactory.makeFeedList(delegate: self, feedImages:feedImages, feed: feed)
         navigationController.viewControllers = [scene]
     }
+    
+    func showFeedDetail(feedImage: AnyObject, feedNotice: AnyObject) {
+        let scene = FeedListFactory.makeDetailScreen(delegate: self, feedImage: feedImage, feedNotice: feedNotice)
+        navigationController.viewControllers = [scene]
+    }
 }
 
 extension GeneralCoordinator {
@@ -40,5 +45,13 @@ extension GeneralCoordinator: SplashScreenPresenterDelegate {
 }
 
 extension GeneralCoordinator: FeedListPresenterDelegate {
-    
+    func showFeedDetailScreen(feedImage: AnyObject, feedNotice: AnyObject) {
+        showFeedDetail(feedImage: feedImage, feedNotice: feedNotice)
+    }
+}
+
+extension GeneralCoordinator: FeedDetailPresenterDelegate {
+    func didTapBack() {
+        showFeedListScreen(feedImages: FeedManager.shared.getFeedImages(), feed: FeedManager.shared.getFeed())
+    }
 }

@@ -10,5 +10,12 @@ import Foundation
 import UIKit
 
 struct FeedListFactory {
-    
+    static func makeDetailScreen(delegate: FeedDetailPresenterDelegate?, feedImage: AnyObject, feedNotice: AnyObject) -> FeedDetailViewController {
+        let viewController = FeedDetailViewController()
+        let presenter = FeedDetailPresenter(feedDetailProtocol: viewController, delegate: delegate)
+        viewController.presenter = presenter
+        viewController.feedImage = feedImage
+        viewController.feedNotice = feedNotice
+        return viewController
+    }
 }

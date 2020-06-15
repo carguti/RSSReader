@@ -30,7 +30,7 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGX-dX-fSh">
                         <rect key="frame" x="98" y="10" width="202" height="48"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -43,14 +43,24 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcN-Pc-Qw5">
+                        <rect key="frame" x="40" y="89" width="240" height="1"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="G4Z-cm-qFx"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="ARl-VA-dLD" secondAttribute="bottom" constant="12" id="0Yr-ul-NNd"/>
                     <constraint firstItem="PGX-dX-fSh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="0gH-xV-yzk"/>
                     <constraint firstItem="PGX-dX-fSh" firstAttribute="leading" secondItem="ARl-VA-dLD" secondAttribute="trailing" constant="20" id="24V-Kk-hkH"/>
+                    <constraint firstAttribute="bottom" secondItem="bcN-Pc-Qw5" secondAttribute="bottom" id="8Bw-ds-PfS"/>
                     <constraint firstAttribute="bottom" secondItem="h6f-PM-yez" secondAttribute="bottom" constant="12" id="AeB-Qd-Xch"/>
+                    <constraint firstAttribute="trailing" secondItem="bcN-Pc-Qw5" secondAttribute="trailing" constant="40" id="KfG-LK-4Cm"/>
                     <constraint firstItem="h6f-PM-yez" firstAttribute="top" secondItem="PGX-dX-fSh" secondAttribute="bottom" constant="4" id="Vaz-no-wQx"/>
                     <constraint firstItem="PGX-dX-fSh" firstAttribute="trailing" secondItem="h6f-PM-yez" secondAttribute="trailing" id="ZAZ-3J-uaI"/>
+                    <constraint firstItem="bcN-Pc-Qw5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="aGE-u7-96W"/>
                     <constraint firstItem="PGX-dX-fSh" firstAttribute="leading" secondItem="h6f-PM-yez" secondAttribute="leading" id="pgq-hh-jdp"/>
                     <constraint firstItem="ARl-VA-dLD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="qWb-3X-Ynr"/>
                     <constraint firstItem="ARl-VA-dLD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="vWq-tB-DTS"/>

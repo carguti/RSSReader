@@ -23,7 +23,11 @@ class FeedListCell: UITableViewCell {
 extension FeedListCell {
     func configureFeed(notice: AnyObject, noticeImage: String) {
         titleLabel.text = notice.object(forKey: "title") as? String
-        descriptionLabel.text = notice.object(forKey: "pubDate") as? String
+        
+        let feedDate = (notice.object(forKey: "pubDate") as? String)?.prefix(16)
+        if let feedDescription = feedDate {
+            descriptionLabel.text = String(feedDescription)
+        }
         getImage(urlString: noticeImage) { (noticeImage) in
             self.setNeedsDisplay()
         }

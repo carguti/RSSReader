@@ -21,7 +21,7 @@ struct SplashScreenFactory {
         let viewController = FeedListViewController()
         let presenter = FeedListPresenter(feedListProtocol: viewController, delegate: delegate)
         viewController.presenter = presenter
-        viewController.arrFeedList = feed as! [AnyObject]
+        viewController.arrFeedList = feed as [AnyObject]
         viewController.arrFeedImages = feedImages
         return viewController
     }

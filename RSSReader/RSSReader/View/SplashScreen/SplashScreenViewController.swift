@@ -19,6 +19,7 @@ class SplashScreenViewController: UIViewController {
         super.viewDidLoad()
         
         presenter.getData()
+        navigationController?.isNavigationBarHidden = true
     }
 }
 
